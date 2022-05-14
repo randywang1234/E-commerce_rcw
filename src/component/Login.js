@@ -17,7 +17,7 @@ const Login = () =>{
         e.preventDefault()
 
         signInWithEmailAndPassword(auth, email,password).then(()=>{
-                navigate("/products")
+                navigate("/")
             })
             .catch((error) =>{
                 switch(error.code){
