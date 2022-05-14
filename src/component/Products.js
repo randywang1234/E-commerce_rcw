@@ -64,7 +64,8 @@ const Products = () =>{
   return (
     <div className='product'> 
         {categories.map((catogorie)=>{
-            return <li onClick={onChangeCategories} key={catogorie.category} className='product-filter'>{catogorie.category}</li>
+            return <li onClick={onChangeCategories
+            } key={catogorie.category} className='product-filter'>{catogorie.category}</li>
         })}
 
 
