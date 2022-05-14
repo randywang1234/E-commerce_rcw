@@ -65,7 +65,7 @@ const Header = () => {
 
                 <div className='header-login' onClick={()=>{
                     signOut(auth)
-                    navigate("products")
+                    navigate("/")
                     }}>
                     登出
                 </div>
