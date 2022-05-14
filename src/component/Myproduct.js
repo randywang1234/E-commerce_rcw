@@ -45,7 +45,7 @@ const Myproduct = () => {
         <div className='product-postion'>
         { products.length > 0 ? products.map((product)=>{
             return (
-                    <div className='product-list' key={product.id} onClick={()=> navigate(`${product.id}`)}>
+                    <div className='product-list' key={product.id} onClick={()=> navigate(`products/${product.id}`)}>
                         <img src={product.image} alt={product.title}/>
                         <h3>{product.title}</h3>
                         <div className='product-info'>
@@ -55,7 +55,9 @@ const Myproduct = () => {
                         </div>
                     </div>
             )
-        }) : (<div className='loading'>資料載入中...</div>)}
+        }) : (<div className='loading'>
+                <p>資料載入中...</p>
+              </div>)}
         </div>
     </div>
       ) : 

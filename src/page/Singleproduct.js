@@ -1,21 +1,20 @@
 import React,{useState,useEffect} from 'react'
-import { Navigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import {  getFirestore , onSnapshot,doc,writeBatch, increment, Timestamp ,collection} from "firebase/firestore"
 import { getAuth,onAuthStateChanged} from "firebase/auth";
 import "../style/singleproduct.css"
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import {useSelector, useDispatch} from 'react-redux'
-import{addItem} from "../action/action"
+import {addItem} from "../action/action"
 import {Link} from "react-router-dom"
 
 const Singleproduct = () =>{
 
-    const{productId} = useParams()
+    const {productId} = useParams()
     const db = getFirestore()
     const auth = getAuth()
     const batch = writeBatch(db)
-    const navigate = Navigate()
     
     const dispatch = useDispatch()
 
@@ -45,7 +44,8 @@ const Singleproduct = () =>{
         dispatch(addItem(singleProducts,amount))
         if(!user){
             alert("請先登入會員")
-            navigate("/")
+        }else{
+            alert("已添加商品")
         }
     }
 
@@ -141,9 +141,9 @@ const Singleproduct = () =>{
                 <p>{singleProducts.description}</p>
             </div>
             <div className='singleproduct-content-count'>
-                <button onClick={Decrease}><RemoveIcon sx={{ fontSize: 20 }} /></button>
+                <button onClick={Decrease}><RemoveIcon sx={{ fontSize: 20, color:"black" }} /></button>
                 <span className='counter'>{amount}</span>
-                <button onClick={Increase}><AddIcon /></button>
+                <button onClick={Increase}><AddIcon sx={{ fontSize: 20, color:"black" }}/></button>
                 <p>{singleProducts.price}$</p>
             </div>
             <div className='singleproduct-content-button'>
@@ -155,7 +155,9 @@ const Singleproduct = () =>{
             </div>
         </div>
         </>) :
-        <div className='loading'>資料載入中...</div>
+            <div className='loading'>
+                <p>資料載入中...</p>
+            </div>
         }
     </div>
 

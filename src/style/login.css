@@ -13,7 +13,7 @@
     padding:30px;
     font-size: 28px;
 }
-.login-form{
+.login .login-form{
     display: flex;
     flex-direction: column;
 }

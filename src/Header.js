@@ -73,7 +73,7 @@ const Header = () => {
         ):(
             <div className='header-list'>
                 <div className='header-login' >
-                    <ShoppingCartIcon sx={{color:"white"}}/>
+                    <ShoppingCartIcon sx={{color:"white"}} onClick={()=> alert("請先登入/註冊會員")}/>
                 </div>
                 <div className='header-login' onClick={()=>navigate("/login")}>
                     登入

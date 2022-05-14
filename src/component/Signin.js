@@ -16,7 +16,7 @@ const Signin = () =>{
     const onSubmit=(e)=>{
         e.preventDefault()
         createUserWithEmailAndPassword(auth,email,password).then(()=>{
-                navigate("/products")
+                navigate("/login")
             })
             .catch((error) =>{
                 switch(error.code){
@@ -39,7 +39,7 @@ const Signin = () =>{
   return (
     <div className='login'>
         <h3>創建帳戶</h3>
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} className='login-form'>
             <input 
             type="email"
             placeholder='Email address'
