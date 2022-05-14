@@ -1,16 +1,19 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
+import { initializeApp } from "firebase/app";// TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-
 // Your web app's Firebase configuration
+  const API_KEY = process.env.REACT_APP_API_KEY
+  const AUTH_DOMAIN = process.env.REACT_APP_AUTH_DOMAIN
+  const SENDER_ID = process.env.REACT_APP_SENDER_ID
+  const APP_ID = process.env.REACT_APP_APP_ID
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBAgU3Og07pBHnXJtHCWRMabi0-4Pf07K4",
-  authDomain: "shopping-cart-43f73.firebaseapp.com",
-  projectId: "shopping-cart-43f73",
-  storageBucket: "shopping-cart-43f73.appspot.com",
-  messagingSenderId: "428995738605",
-  appId: "1:428995738605:web:94115a7054c3d4fc6505e4"
+  apiKey: `${API_KEY}`,
+  authDomain: `${AUTH_DOMAIN}.firebaseapp.com`,
+  projectId: `${AUTH_DOMAIN}`,
+  storageBucket: `${AUTH_DOMAIN}.appspot.com`,
+  messagingSenderId: `${SENDER_ID}`,
+  appId: `${APP_ID}`
 };
 
 // Initialize Firebase

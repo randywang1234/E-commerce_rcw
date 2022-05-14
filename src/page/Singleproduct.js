@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import { useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 import {  getFirestore , onSnapshot,doc,writeBatch, increment, Timestamp ,collection} from "firebase/firestore"
 import { getAuth,onAuthStateChanged} from "firebase/auth";
 import "../style/singleproduct.css"
@@ -15,7 +15,8 @@ const Singleproduct = () =>{
     const db = getFirestore()
     const auth = getAuth()
     const batch = writeBatch(db)
-
+    const navigate = Navigate()
+    
     const dispatch = useDispatch()
 
     const cart = useSelector((state)=> state.cart)
@@ -42,6 +43,10 @@ const Singleproduct = () =>{
 
     const hanleAddtoCart =()=>{
         dispatch(addItem(singleProducts,amount))
+        if(!user){
+            alert("請先登入會員")
+            navigate("/")
+        }
     }
 
 
