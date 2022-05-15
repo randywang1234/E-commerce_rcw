@@ -46,6 +46,7 @@ const Singleproduct = () =>{
             alert("請先登入會員")
         }else{
             alert("已添加商品")
+            
         }
     }
 
@@ -85,6 +86,9 @@ const Singleproduct = () =>{
 
     const onSubmit=(e)=>{
         e.preventDefault()
+        if(!user){
+            alert("請先登入會員")
+        }
         const productsRef = doc(db,"products",productId)
         batch.update(productsRef,{
             commentsCount: increment(1)
@@ -148,9 +152,9 @@ const Singleproduct = () =>{
             </div>
             <div className='singleproduct-content-button'>
                 <button onClick={hanleAddtoCart}>加入購物車</button>
-                <Link to="/cart">
+                {/* <Link to="/cart"> */}
                     <button onClick={hanleAddtoCart}>直接購買</button>
-                </Link>
+                {/* </Link> */}
 
             </div>
         </div>

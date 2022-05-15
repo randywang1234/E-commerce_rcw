@@ -40,7 +40,7 @@ const Cart = () => {
       { carts.length === 0 ?
         <div className='carts-empty'>
           <p >購物車為空</p>
-          <Link to="/products">
+          <Link to="/">
             <button className='empty-btn'>選擇商品</button>
           </Link>
         </div>
