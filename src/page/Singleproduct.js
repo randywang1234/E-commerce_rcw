@@ -142,7 +142,7 @@ const Singleproduct = () =>{
                 <h3>商品名稱</h3>
                 <p>{singleProducts.title}</p>
                 <h3>描述</h3>
-                <p>{singleProducts.description}</p>
+                <p className='singleproduct-content-info-description'>{singleProducts.description}</p>
             </div>
             <div className='singleproduct-content-count'>
                 <button onClick={Decrease}><RemoveIcon sx={{ fontSize: 20, color:"black" }} /></button>

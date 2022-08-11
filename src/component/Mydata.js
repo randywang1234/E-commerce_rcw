@@ -31,23 +31,26 @@ function Photo ({user}){
   return (
     <>
     <div className='mydata-list'>
-          <img className="mydata-photo" src={user.photoURL ? user.photoURL : "https://react.semantic-ui.com/images/wireframe/image.png"} alt=""/>
+          <div className='mydata-list-photo'>
+            <img className="mydata-photo" src={user.photoURL ? user.photoURL : "https://react.semantic-ui.com/images/wireframe/image.png"} alt=""/>
+          </div>
           <button onClick={()=>setModalOpen(!modalOpen)}>修改</button>
     </div>
     { modalOpen &&
+    
       <div className='modal-name'>
-          <div className='modal-center'>
-            <p>修改會員名稱</p>
-            <div className='modal-newphoto'>
-              <img src={file ? URL.createObjectURL(file) : "https://react.semantic-ui.com/images/wireframe/image.png"} alt=""/>
-            </div>
-            <input type="file" placeholder='請輸入新的會員名稱' onChange={(e)=>setFile(e.target.files[0])}/>
-            <div className='modal-btn'>
-              <button onClick={()=>setModalOpen(false)}>取消</button>
-              <button onClick={onSubmit}>修改</button>
-            </div>
+        <div className='modal-center'>
+          <p>修改會員名稱</p>
+          <div className='modal-newphoto'>
+            <img src={file ? URL.createObjectURL(file) : "https://react.semantic-ui.com/images/wireframe/image.png"} alt=""/>
+          </div>
+          <input type="file" placeholder='請輸入新的會員名稱' onChange={(e)=>setFile(e.target.files[0])}/>
+          <div className='modal-btn'>
+            <button onClick={()=>setModalOpen(false)}>取消</button>
+            <button onClick={onSubmit}>修改</button>
           </div>
         </div>
+      </div>
     }
     </>
   )

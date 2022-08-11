@@ -2,6 +2,47 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+Website link:https://shopping-cart-43f73.web.app/
+
+# Introduction
+It's an E-commerce webiste, integrate fake store API with firebase to make it works. The point in this website is that user can be a buyer and also a seller. Therefore, User can create your own products by login the webiste and also being a manager to manage the items you have had.
+
+
+Functionality:
+
+(1) Login system (登入/註冊)
+
+(2) Modifying the user data (information, create the new product, overview of the product you created) (我的資料)
+
+(3) Filter system (分類系統)
+
+(4) Cart system (購物車功能)
+
+(5) Comment system (留言)
+
+
+### Homepage
+![image](https://user-images.githubusercontent.com/49906636/168668596-7b3b26c2-8765-48d0-b159-b433520d593c.png)
+                                                   
+
+
+### Cart system
+![image](https://user-images.githubusercontent.com/49906636/168669746-81849100-c69c-4f2e-8386-d041f9cf7f3d.png)
+                                                  
+
+
+### Comment system
+![image](https://user-images.githubusercontent.com/49906636/168669847-0a29e9f2-1410-4ce6-843f-fb4aa4d3e24c.png)
+
+            
+            
+### Create your own product
+![image](https://user-images.githubusercontent.com/49906636/168669906-54be0868-0c91-46ea-91b2-7c0e9ac48f7a.png)
+
+                                            
+
+
 ## Available Scripts
 
 In the project directory, you can run:

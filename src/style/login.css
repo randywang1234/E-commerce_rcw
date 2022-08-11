@@ -48,3 +48,46 @@
     border-radius: 10px;
     border:none;
 }
+
+
+@media only screen and (max-width:1024px){
+    .login{
+        margin:100px auto 300px;
+    }
+    .login-form .errormessage{
+        margin:3px 17px;
+    }
+}
+@media only screen and (max-width:1024px){
+    .login{
+        width:500px;
+    }
+    .login-form input{
+        width:450px;
+        margin: 10px auto;
+    }
+    .login-form button{
+        width:480px;
+        margin: 10px auto;
+    }
+}
+
+
+@media only screen and (max-width:414px){
+    .login{
+        width:350px;
+        height:400px;
+        margin:100px auto;
+    }
+    .login-form input{
+        width:300px;
+        margin: 10px auto;
+    }
+    .login-form button{
+        width:330px;
+        margin: 10px auto;
+    }
+    .login-form .errormessage{
+        width:340px;
+    }
+}

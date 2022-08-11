@@ -63,10 +63,13 @@ const Products = () =>{
 
   return (
     <div className='product'> 
-        {categories.map((catogorie)=>{
-            return <li onClick={onChangeCategories} key={catogorie.category} className='product-filter'>{catogorie.category}</li>
-        })}
-
+        <div className='product-filter'>
+            {categories.map((catogorie)=>{
+                return (
+                        <span onClick={onChangeCategories} key={catogorie.category} className='product-filter-list'>{catogorie.category}</span>
+                )
+            })}
+        </div>
 
 
         <div className='product-postion'>

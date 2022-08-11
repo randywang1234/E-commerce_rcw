@@ -4,6 +4,7 @@
 let initialstate ={
     cart:[]
 }
+
 if(localStorage.getItem("cart")){
     initialstate.cart = JSON.parse(localStorage.getItem("cart")) 
 } else {

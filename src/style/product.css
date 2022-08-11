@@ -1,15 +1,12 @@
 .product{
     width: 1210px;
     margin:auto;
-    /* background-color: antiquewhite; */
 }
-.product-filter{
+
+.product-filter-list{
     display: inline-block;
     padding:10px;
-    width:97px;
-    height:15px;
     font-size: 12px;
-    line-height: 15px;
     background-color: white;
     text-align: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -17,12 +14,10 @@
     margin:63px 25px 10px 15px;
     cursor: pointer;
 }
-
-
 .product-postion{
-    width:1210px;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 .product-list{
     width:375px;
@@ -81,3 +76,51 @@
 }
 
 
+@media only screen and (max-width:1024px){
+    .product{
+        width: 100%;
+    }
+    .product-filter{
+        display: flex;
+        justify-content: center;
+    }
+    .product-filter-list{
+        border-radius: 10px;
+    }
+    .product-postion{
+        width:100%;
+        justify-content: center;
+    }
+    .product-list{
+        margin: 10px 10px
+    }
+}
+
+
+@media only screen and (max-width:769px){
+    .product-filter{
+        flex-wrap: wrap;
+        margin:20px
+    }
+    .product-filter-list{
+        font-size: 10px;
+        margin: 10px 10px;
+        border-radius: 10px;
+    }
+    
+}
+
+@media only screen and (max-width:414px){
+    .product-filter{
+        flex-wrap: wrap;
+        margin:10px 0px;
+        padding: 10px;
+        justify-content: left;
+    }
+    .product-filter-list{
+        font-size: 10px;
+        margin: 5px 5px;
+        padding:10px;
+        border-radius: 10px;
+    }
+}

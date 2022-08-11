@@ -70,10 +70,12 @@ const Newproduct = () => {
 
   return (
     <div className='newproduct'>
-      <h3>新增商品</h3>
       <div className='newproduct-list'>
+         <h3>新增商品</h3>
         <form className='newproduct-list-content' onSubmit={onSubmit}>
-          <img src={file ? URL.createObjectURL(file) :"https://react.semantic-ui.com/images/wireframe/image.png"} alt=""/>
+          <div className='newproduct-list-content-img'>
+            <img src={file ? URL.createObjectURL(file) :"https://react.semantic-ui.com/images/wireframe/image.png"} alt=""/>
+          </div>
           <div className='newproduct-list-content-detail'>
             <input name="" type="file" onChange={(e)=>setFile(e.target.files[0])}/>
             <div>

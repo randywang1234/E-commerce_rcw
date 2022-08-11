@@ -4,8 +4,7 @@ import firebase from "../utils/firebase"
 import { getAuth,onAuthStateChanged} from "firebase/auth";
 import StarIcon from '@mui/icons-material/Star';
 import {useNavigate} from 'react-router-dom'
-
-
+import "../style/myproduct.css"
 
 const Myproduct = () => {
     
